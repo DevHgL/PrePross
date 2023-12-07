@@ -89,7 +89,7 @@ for Y in range(1, len(sys.argv)):
 
     def include(line):
         included_files = []
-        path = r"D:\MinGW\x86_64-w64-mingw32\include" # Detalhe importante: Esse endereço é do meu computador físico, não do notebook!
+        path = r"C:\MinGW\include" # Detalhe importante: Esse endereço é do mingw do notebook.
         line_divided = line.split()
 
         if line_divided and len(line_divided) >= 2 and line_divided[0] == '#include':
@@ -163,6 +163,6 @@ for Y in range(1, len(sys.argv)):
 
     texto = codigo_final
 
-    nome_arquivo = "Resultado" + str(Y) + ".c"
+    nome_arquivo = "AqrPreProcessado" + str(Y) + ".c"
     with open(nome_arquivo, "w") as arq:
         arq.write("".join(texto))
